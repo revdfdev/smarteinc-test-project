@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./CompanyDetails.css"
 
 export function CompanyDetails({ match, companyInfo, getCompanyInformation, history }) {
-    console.log("Match", match.params);
+
     const { companyName } = match.params;
 
     useEffect(() => {
@@ -18,9 +18,7 @@ export function CompanyDetails({ match, companyInfo, getCompanyInformation, hist
             companyName: companyName
         })
     }
-
-    console.log("Company info", companyInfo);
-
+    
     return (
         <Container>
             <Col>
@@ -166,7 +164,12 @@ export function CompanyDetails({ match, companyInfo, getCompanyInformation, hist
                             </Card.Body>
                             <Card.Footer>
                                 <div className="d-flex justify-content-end">
-                                    <Button color="primary" as={Link} to={`${companyName}/employees`}>View employees</Button>
+                                    <Button color="primary" as={Link} to={{
+                                        pathname: `${companyName}/employees`,
+                                        state: {
+                                            companyName: companyName
+                                        }
+                                    }}>View employees</Button>
                                 </div>
                             </Card.Footer>
                         </Card>

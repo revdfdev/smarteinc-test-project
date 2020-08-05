@@ -86,7 +86,7 @@ export function getCompanyEmployees(company) {
 function* handleGetAllComapnies() {
     try {
         const data = yield call(getAllCompaniesApi);
-        console.log("Data", data);
+        
         yield put({
             type: GET_ALL_COMPANIES_SUCCESS,
             companies: data

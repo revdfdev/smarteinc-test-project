@@ -5,14 +5,12 @@ import ListItem from '../../components/ListItem';
 import Spinner from "../../components/Spinner";
 import * as is from "is_js";
 
-export function Employees({ history, employees, getCompanyEmployees }) {
+export function Employees({ location, employees, getCompanyEmployees }) {
 
     const searchRef = useRef();
 
-    console.log("history", JSON.stringify(history.state));
-
     useEffect(() => {
-        getCompanyEmployees("")
+        getCompanyEmployees(location.state.companyName)
         return () => {
         }
     }, [employees])

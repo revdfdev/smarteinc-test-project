@@ -78,22 +78,3 @@ export function CompaniesList({ getAllCompanies, companies }) {
         </Container>
     )
 }
-
-// export class CompaniesList extends Component {
-
-//     componentDidMount() {
-//         this.props.getAllCompanies();
-//     }
-
-//     render() {
-//         const { match, history, companies } = this.props;
-
-//         console.log("Match", match);
-//         console.log("History", history);
-//         return(
-//             <div>
-//                 {JSON.stringify(companies, null, 3)}
-//             </div>
-//         )
-//     }
-// }
