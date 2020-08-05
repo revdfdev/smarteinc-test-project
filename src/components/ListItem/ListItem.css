@@ -1,0 +1,19 @@
+.vert-divider-active {
+    border-left: 3px solid grey;
+}
+
+.vert-divider {
+    border-left: 3px solid grey;
+}
+
+.avatar-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-avatar {
+    vertical-align: middle;
+    width: 75px;
+    height: 65px;
+    border-radius: 50%;
+}
